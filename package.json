@@ -1,1 +1,38 @@
-{     "devDependencies": {         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmdoc-website-scraper",     "homepage": "https://github.com/npmdoc/node-npmdoc-website-scraper",     "repository": {         "type": "git",         "url": "https://github.com/npmdoc/node-npmdoc-website-scraper.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "#### api documentation for  [website-scraper (v2.3.0)](https://github.com/s0ph1e/node-website-scraper)  [![npm package](https://img.shields.io/npm/v/npmdoc-website-scraper.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-website-scraper) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-website-scraper.svg)](https://travis-ci.org/npmdoc/node-npmdoc-website-scraper)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-website-scraper",
+    "keywords": [
+        "documentation",
+        "website-scraper"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_website_scraper.js",
+    "name": "npmdoc-website-scraper",
+    "nameAlias": "npmdoc_website_scraper",
+    "nameOriginal": "npmdoc-website-scraper",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmdoc/node-npmdoc-website-scraper.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "2017.4.23"
+}
