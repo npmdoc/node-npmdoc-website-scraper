@@ -1,0 +1,2436 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/s0ph1e/node-website-scraper"
+
+    >website-scraper (v2.3.0)</a>
+</h1>
+<h4>Download website to a local directory (including all css, images, js, etc.)</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.website-scraper">module website-scraper</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.website-scraper">
+            function <span class="apidocSignatureSpan"></span>website-scraper
+            <span class="apidocSignatureSpan">(options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.css_text">
+            function <span class="apidocSignatureSpan">website-scraper.</span>css_text
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.html_common_tag">
+            function <span class="apidocSignatureSpan">website-scraper.</span>html_common_tag
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.html_img_srcset_tag">
+            function <span class="apidocSignatureSpan">website-scraper.</span>html_img_srcset_tag
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.html_source_element">
+            function <span class="apidocSignatureSpan">website-scraper.</span>html_source_element
+            <span class="apidocSignatureSpan">(el, rule)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.resource">
+            function <span class="apidocSignatureSpan">website-scraper.</span>resource
+            <span class="apidocSignatureSpan">(url, filename)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.scraper">
+            function <span class="apidocSignatureSpan">website-scraper.</span>scraper
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">website-scraper.</span>css_text.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">website-scraper.</span>defaults</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">website-scraper.</span>html_common_tag.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">website-scraper.</span>html_img_srcset_tag.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">website-scraper.</span>html_source_element.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">website-scraper.</span>logger</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">website-scraper.</span>resource.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">website-scraper.</span>scraper.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.website-scraper.css_text">module website-scraper.css_text</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.css_text.css_text">
+            function <span class="apidocSignatureSpan">website-scraper.</span>css_text
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.website-scraper.css_text.prototype">module website-scraper.css_text.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.css_text.prototype.getPaths">
+            function <span class="apidocSignatureSpan">website-scraper.css_text.prototype.</span>getPaths
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.css_text.prototype.updateText">
+            function <span class="apidocSignatureSpan">website-scraper.css_text.prototype.</span>updateText
+            <span class="apidocSignatureSpan">(pathsToUpdate)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.website-scraper.html_common_tag">module website-scraper.html_common_tag</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.html_common_tag.html_common_tag">
+            function <span class="apidocSignatureSpan">website-scraper.</span>html_common_tag
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.website-scraper.html_common_tag.prototype">module website-scraper.html_common_tag.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.html_common_tag.prototype.getPaths">
+            function <span class="apidocSignatureSpan">website-scraper.html_common_tag.prototype.</span>getPaths
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.html_common_tag.prototype.updateText">
+            function <span class="apidocSignatureSpan">website-scraper.html_common_tag.prototype.</span>updateText
+            <span class="apidocSignatureSpan">(pathsToUpdate)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.website-scraper.html_img_srcset_tag">module website-scraper.html_img_srcset_tag</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.html_img_srcset_tag.html_img_srcset_tag">
+            function <span class="apidocSignatureSpan">website-scraper.</span>html_img_srcset_tag
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.website-scraper.html_img_srcset_tag.prototype">module website-scraper.html_img_srcset_tag.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.html_img_srcset_tag.prototype.getPaths">
+            function <span class="apidocSignatureSpan">website-scraper.html_img_srcset_tag.prototype.</span>getPaths
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.html_img_srcset_tag.prototype.updateText">
+            function <span class="apidocSignatureSpan">website-scraper.html_img_srcset_tag.prototype.</span>updateText
+            <span class="apidocSignatureSpan">(pathsToUpdate)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.website-scraper.html_source_element">module website-scraper.html_source_element</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.html_source_element.html_source_element">
+            function <span class="apidocSignatureSpan">website-scraper.</span>html_source_element
+            <span class="apidocSignatureSpan">(el, rule)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.website-scraper.html_source_element.prototype">module website-scraper.html_source_element.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.html_source_element.prototype.getData">
+            function <span class="apidocSignatureSpan">website-scraper.html_source_element.prototype.</span>getData
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.html_source_element.prototype.getPathContainer">
+            function <span class="apidocSignatureSpan">website-scraper.html_source_element.prototype.</span>getPathContainer
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.html_source_element.prototype.getPathContainerClass">
+            function <span class="apidocSignatureSpan">website-scraper.html_source_element.prototype.</span>getPathContainerClass
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.html_source_element.prototype.setData">
+            function <span class="apidocSignatureSpan">website-scraper.html_source_element.prototype.</span>setData
+            <span class="apidocSignatureSpan">(newData)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.website-scraper.logger">module website-scraper.logger</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.logger.debug">
+            function <span class="apidocSignatureSpan">website-scraper.logger.</span>debug
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.logger.error">
+            function <span class="apidocSignatureSpan">website-scraper.logger.</span>error
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.logger.info">
+            function <span class="apidocSignatureSpan">website-scraper.logger.</span>info
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.logger.log">
+            function <span class="apidocSignatureSpan">website-scraper.logger.</span>log
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.logger.warn">
+            function <span class="apidocSignatureSpan">website-scraper.logger.</span>warn
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.website-scraper.resource">module website-scraper.resource</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.resource.resource">
+            function <span class="apidocSignatureSpan">website-scraper.</span>resource
+            <span class="apidocSignatureSpan">(url, filename)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.website-scraper.resource.prototype">module website-scraper.resource.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.resource.prototype.createChild">
+            function <span class="apidocSignatureSpan">website-scraper.resource.prototype.</span>createChild
+            <span class="apidocSignatureSpan">(url, filename)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.resource.prototype.getDepth">
+            function <span class="apidocSignatureSpan">website-scraper.resource.prototype.</span>getDepth
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.resource.prototype.getFilename">
+            function <span class="apidocSignatureSpan">website-scraper.resource.prototype.</span>getFilename
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.resource.prototype.getText">
+            function <span class="apidocSignatureSpan">website-scraper.resource.prototype.</span>getText
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.resource.prototype.getType">
+            function <span class="apidocSignatureSpan">website-scraper.resource.prototype.</span>getType
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.resource.prototype.getUrl">
+            function <span class="apidocSignatureSpan">website-scraper.resource.prototype.</span>getUrl
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.resource.prototype.isCss">
+            function <span class="apidocSignatureSpan">website-scraper.resource.prototype.</span>isCss
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.resource.prototype.isHtml">
+            function <span class="apidocSignatureSpan">website-scraper.resource.prototype.</span>isHtml
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.resource.prototype.isSaved">
+            function <span class="apidocSignatureSpan">website-scraper.resource.prototype.</span>isSaved
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.resource.prototype.setFilename">
+            function <span class="apidocSignatureSpan">website-scraper.resource.prototype.</span>setFilename
+            <span class="apidocSignatureSpan">(filename)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.resource.prototype.setMetadata">
+            function <span class="apidocSignatureSpan">website-scraper.resource.prototype.</span>setMetadata
+            <span class="apidocSignatureSpan">(metadata)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.resource.prototype.setSaved">
+            function <span class="apidocSignatureSpan">website-scraper.resource.prototype.</span>setSaved
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.resource.prototype.setText">
+            function <span class="apidocSignatureSpan">website-scraper.resource.prototype.</span>setText
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.resource.prototype.setType">
+            function <span class="apidocSignatureSpan">website-scraper.resource.prototype.</span>setType
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.resource.prototype.setUrl">
+            function <span class="apidocSignatureSpan">website-scraper.resource.prototype.</span>setUrl
+            <span class="apidocSignatureSpan">(url)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.resource.prototype.toString">
+            function <span class="apidocSignatureSpan">website-scraper.resource.prototype.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.resource.prototype.updateChild">
+            function <span class="apidocSignatureSpan">website-scraper.resource.prototype.</span>updateChild
+            <span class="apidocSignatureSpan">(oldChild, newChild)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.website-scraper.scraper">module website-scraper.scraper</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.scraper.scraper">
+            function <span class="apidocSignatureSpan">website-scraper.</span>scraper
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">website-scraper.scraper.</span>defaults</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.website-scraper.scraper.prototype">module website-scraper.scraper.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.scraper.prototype.createNewRequest">
+            function <span class="apidocSignatureSpan">website-scraper.scraper.prototype.</span>createNewRequest
+            <span class="apidocSignatureSpan">(resource)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.scraper.prototype.errorCleanup">
+            function <span class="apidocSignatureSpan">website-scraper.scraper.prototype.</span>errorCleanup
+            <span class="apidocSignatureSpan">(error)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.scraper.prototype.handleError">
+            function <span class="apidocSignatureSpan">website-scraper.scraper.prototype.</span>handleError
+            <span class="apidocSignatureSpan">(err, resource)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.scraper.prototype.load">
+            function <span class="apidocSignatureSpan">website-scraper.scraper.prototype.</span>load
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.scraper.prototype.loadResource">
+            function <span class="apidocSignatureSpan">website-scraper.scraper.prototype.</span>loadResource
+            <span class="apidocSignatureSpan">(resource)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.scraper.prototype.requestResource">
+            function <span class="apidocSignatureSpan">website-scraper.scraper.prototype.</span>requestResource
+            <span class="apidocSignatureSpan">(resource)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.scraper.prototype.saveResource">
+            function <span class="apidocSignatureSpan">website-scraper.scraper.prototype.</span>saveResource
+            <span class="apidocSignatureSpan">(resource)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.scraper.prototype.scrape">
+            function <span class="apidocSignatureSpan">website-scraper.scraper.prototype.</span>scrape
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.website-scraper.scraper.prototype.waitForLoad">
+            function <span class="apidocSignatureSpan">website-scraper.scraper.prototype.</span>waitForLoad
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.website-scraper" id="apidoc.module.website-scraper">module website-scraper</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.website-scraper" id="apidoc.element.website-scraper.website-scraper">
+        function <span class="apidocSignatureSpan"></span>website-scraper
+        <span class="apidocSignatureSpan">(options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(options, callback) =&#x3e; {
+	return Promise.try(() =&#x3e; {
+		return new Scraper(options).scrape(callback);
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.css_text" id="apidoc.element.website-scraper.css_text">
+        function <span class="apidocSignatureSpan">website-scraper.</span>css_text
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CssText(text) {
+	this.text = text || &#x27;&#x27;;
+	this.paths = getCssUrls(this.text);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.html_common_tag" id="apidoc.element.website-scraper.html_common_tag">
+        function <span class="apidocSignatureSpan">website-scraper.</span>html_common_tag
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HtmlCommonTag(text) {
+	this.text = text || &#x27;&#x27;;
+	this.paths = getPaths(this.text);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.html_img_srcset_tag" id="apidoc.element.website-scraper.html_img_srcset_tag">
+        function <span class="apidocSignatureSpan">website-scraper.</span>html_img_srcset_tag
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HtmlImgSrcSetTag(text) {
+	this.text = text || &#x27;&#x27;;
+	this.imgSrcsetParts = srcset.parse(this.text);
+	this.paths = this.imgSrcsetParts.map(function getPath (imgSrcset) {
+		return imgSrcset.url;
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.html_source_element" id="apidoc.element.website-scraper.html_source_element">
+        function <span class="apidocSignatureSpan">website-scraper.</span>html_source_element
+        <span class="apidocSignatureSpan">(el, rule)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HtmlSourceElement(el, rule) {
+	this.el = el;
+	this.rule = rule;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.resource" id="apidoc.element.website-scraper.resource">
+        function <span class="apidocSignatureSpan">website-scraper.</span>resource
+        <span class="apidocSignatureSpan">(url, filename)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Resource(url, filename) {
+	this.url = url;
+	this.filename = filename;
+
+	this.type = null;
+	this.depth = 0;
+
+	this.parent = null;
+	this.children = [];
+
+	this.saved = false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.scraper" id="apidoc.element.website-scraper.scraper">
+        function <span class="apidocSignatureSpan">website-scraper.</span>scraper
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Scraper(options) {
+	const self = this;
+
+	self.options = u.extend(defaults, options);
+	self.options.request = u.extend(defaults.request, options.request);
+	self.options.urls = Array.isArray(self.options.urls) ? self.options.urls : [self.options.urls];
+
+	if (self.options.subdirectories) {
+		self.options.subdirectories.forEach((element) =&#x3e; {
+			element.extensions = element.extensions.map((ext) =&#x3e; ext.toLowerCase());
+		});
+	}
+
+	if (self.options.recursive) {
+		self.options.sources = _.union(self.options.sources, recursiveSources);
+	}
+
+	logger.info(&#x27;init with options&#x27;, self.options);
+
+	self.request = new Request(self.options);
+	self.resourceHandler = new ResourceHandler(self.options, self);
+	self.filenameGenerator = new FilenameGenerator(self.options);
+	self.resourceSaver = self.options.resourceSaver ? new self.options.resourceSaver(u.clone(self.options)) : new ResourceSaver(self
+.options);
+
+	// Array of Resources for downloading
+	self.resources = self.options.urls.map((obj) =&#x3e; {
+		const url = (obj &#x26;&#x26; obj.url) ? obj.url : obj;
+		const filename = (obj &#x26;&#x26; obj.filename) ? obj.filename : self.options.defaultFilename;
+		return new Resource(url, filename);
+	});
+
+	self.requestedResourcePromises = new NormalizedUrlMap(); // Map url -&#x3e; request promise
+	self.loadedResources = new NormalizedUrlMap(); // Map url -&#x3e; resource
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.website-scraper.css_text" id="apidoc.module.website-scraper.css_text">module website-scraper.css_text</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.css_text.css_text" id="apidoc.element.website-scraper.css_text.css_text">
+        function <span class="apidocSignatureSpan">website-scraper.</span>css_text
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function CssText(text) {
+	this.text = text || &#x27;&#x27;;
+	this.paths = getCssUrls(this.text);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.website-scraper.css_text.prototype" id="apidoc.module.website-scraper.css_text.prototype">module website-scraper.css_text.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.css_text.prototype.getPaths" id="apidoc.element.website-scraper.css_text.prototype.getPaths">
+        function <span class="apidocSignatureSpan">website-scraper.css_text.prototype.</span>getPaths
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getPaths() {
+	return this.paths;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.css_text.prototype.updateText" id="apidoc.element.website-scraper.css_text.prototype.updateText">
+        function <span class="apidocSignatureSpan">website-scraper.css_text.prototype.</span>updateText
+        <span class="apidocSignatureSpan">(pathsToUpdate)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function updateText(pathsToUpdate) {
+	var updatedText = this.text;
+	pathsToUpdate.forEach(function updatePath (path) {
+		updatedText = changeExactlyMatchedUrl(updatedText, path.oldPath, path.newPath);
+	});
+	return updatedText;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.website-scraper.html_common_tag" id="apidoc.module.website-scraper.html_common_tag">module website-scraper.html_common_tag</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.html_common_tag.html_common_tag" id="apidoc.element.website-scraper.html_common_tag.html_common_tag">
+        function <span class="apidocSignatureSpan">website-scraper.</span>html_common_tag
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HtmlCommonTag(text) {
+	this.text = text || &#x27;&#x27;;
+	this.paths = getPaths(this.text);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.website-scraper.html_common_tag.prototype" id="apidoc.module.website-scraper.html_common_tag.prototype">module website-scraper.html_common_tag.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.html_common_tag.prototype.getPaths" id="apidoc.element.website-scraper.html_common_tag.prototype.getPaths">
+        function <span class="apidocSignatureSpan">website-scraper.html_common_tag.prototype.</span>getPaths
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getPaths() {
+	return this.paths;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.html_common_tag.prototype.updateText" id="apidoc.element.website-scraper.html_common_tag.prototype.updateText">
+        function <span class="apidocSignatureSpan">website-scraper.html_common_tag.prototype.</span>updateText
+        <span class="apidocSignatureSpan">(pathsToUpdate)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function updateText(pathsToUpdate) {
+	var pathToUpdate = _.find(pathsToUpdate, {oldPath: this.paths[0]});
+	return pathToUpdate ? pathToUpdate.newPath : this.text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.website-scraper.html_img_srcset_tag" id="apidoc.module.website-scraper.html_img_srcset_tag">module website-scraper.html_img_srcset_tag</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.html_img_srcset_tag.html_img_srcset_tag" id="apidoc.element.website-scraper.html_img_srcset_tag.html_img_srcset_tag">
+        function <span class="apidocSignatureSpan">website-scraper.</span>html_img_srcset_tag
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HtmlImgSrcSetTag(text) {
+	this.text = text || &#x27;&#x27;;
+	this.imgSrcsetParts = srcset.parse(this.text);
+	this.paths = this.imgSrcsetParts.map(function getPath (imgSrcset) {
+		return imgSrcset.url;
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.website-scraper.html_img_srcset_tag.prototype" id="apidoc.module.website-scraper.html_img_srcset_tag.prototype">module website-scraper.html_img_srcset_tag.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.html_img_srcset_tag.prototype.getPaths" id="apidoc.element.website-scraper.html_img_srcset_tag.prototype.getPaths">
+        function <span class="apidocSignatureSpan">website-scraper.html_img_srcset_tag.prototype.</span>getPaths
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getPaths() {
+	return this.paths;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.html_img_srcset_tag.prototype.updateText" id="apidoc.element.website-scraper.html_img_srcset_tag.prototype.updateText">
+        function <span class="apidocSignatureSpan">website-scraper.html_img_srcset_tag.prototype.</span>updateText
+        <span class="apidocSignatureSpan">(pathsToUpdate)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function updateText(pathsToUpdate) {
+	var imgSrcsetParts = this.imgSrcsetParts;
+	pathsToUpdate.forEach(function updatePath (path) {
+		var srcsToUpdate = _.filter(imgSrcsetParts, {url: path.oldPath});
+		srcsToUpdate.forEach((srcToUpdate) =&#x3e; {
+			srcToUpdate.url = path.newPath;
+		});
+	});
+	return srcset.stringify(imgSrcsetParts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.website-scraper.html_source_element" id="apidoc.module.website-scraper.html_source_element">module website-scraper.html_source_element</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.html_source_element.html_source_element" id="apidoc.element.website-scraper.html_source_element.html_source_element">
+        function <span class="apidocSignatureSpan">website-scraper.</span>html_source_element
+        <span class="apidocSignatureSpan">(el, rule)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HtmlSourceElement(el, rule) {
+	this.el = el;
+	this.rule = rule;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.website-scraper.html_source_element.prototype" id="apidoc.module.website-scraper.html_source_element.prototype">module website-scraper.html_source_element.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.html_source_element.prototype.getData" id="apidoc.element.website-scraper.html_source_element.prototype.getData">
+        function <span class="apidocSignatureSpan">website-scraper.html_source_element.prototype.</span>getData
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getData() {
+	var text = this.rule.attr ? this.el.attr(this.rule.attr) : this.el.text();
+	return utils.decodeHtmlEntities(text);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	});
+
+	return selectedRule ? selectedRule.containerClass : CommonTag;
+};
+
+HtmlSourceElement.prototype.getPathContainer = function getPathContainer () {
+	var ContainerClass = this.getPathContainerClass();
+	var textWithResources = this.<span class="apidocCodeKeywordSpan">getData</span>();
+	return textWithResources ? new ContainerClass(textWithResources) : null;
+};
+
+module.exports = HtmlSourceElement;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.html_source_element.prototype.getPathContainer" id="apidoc.element.website-scraper.html_source_element.prototype.getPathContainer">
+        function <span class="apidocSignatureSpan">website-scraper.html_source_element.prototype.</span>getPathContainer
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getPathContainer() {
+	var ContainerClass = this.getPathContainerClass();
+	var textWithResources = this.getData();
+	return textWithResources ? new ContainerClass(textWithResources) : null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.html_source_element.prototype.getPathContainerClass" id="apidoc.element.website-scraper.html_source_element.prototype.getPathContainerClass">
+        function <span class="apidocSignatureSpan">website-scraper.html_source_element.prototype.</span>getPathContainerClass
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getPathContainerClass() {
+	var selectedRule = _.find(pathContainersByRule, (containerByRule) =&#x3e; {
+		return this.el.is(containerByRule.selector) &#x26;&#x26; this.rule.attr === containerByRule.attr;
+	});
+
+	return selectedRule ? selectedRule.containerClass : CommonTag;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		return this.el.is(containerByRule.selector) &#x26;&#x26; this.rule.attr === containerByRule.attr;
+	});
+
+	return selectedRule ? selectedRule.containerClass : CommonTag;
+};
+
+HtmlSourceElement.prototype.getPathContainer = function getPathContainer () {
+	var ContainerClass = this.<span class="apidocCodeKeywordSpan">getPathContainerClass</span>();
+	var textWithResources = this.getData();
+	return textWithResources ? new ContainerClass(textWithResources) : null;
+};
+
+module.exports = HtmlSourceElement;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.html_source_element.prototype.setData" id="apidoc.element.website-scraper.html_source_element.prototype.setData">
+        function <span class="apidocSignatureSpan">website-scraper.html_source_element.prototype.</span>setData
+        <span class="apidocSignatureSpan">(newData)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setData(newData) {
+	this.rule.attr ? this.el.attr(this.rule.attr, newData) : this.el.text(newData);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.website-scraper.logger" id="apidoc.module.website-scraper.logger">module website-scraper.logger</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.logger.debug" id="apidoc.element.website-scraper.logger.debug">
+        function <span class="apidocSignatureSpan">website-scraper.logger.</span>debug
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function debug() {
+  // disabled?
+  if (!debug.enabled) return;
+
+  var self = debug;
+
+  // set `diff` timestamp
+  var curr = +new Date();
+  var ms = curr - (prevTime || curr);
+  self.diff = ms;
+  self.prev = prevTime;
+  self.curr = curr;
+  prevTime = curr;
+
+  // turn the `arguments` into a proper Array
+  var args = new Array(arguments.length);
+  for (var i = 0; i &#x3c; args.length; i++) {
+    args[i] = arguments[i];
+  }
+
+  args[0] = exports.coerce(args[0]);
+
+  if (&#x27;string&#x27; !== typeof args[0]) {
+    // anything else let&#x27;s inspect with %O
+    args.unshift(&#x27;%O&#x27;);
+  }
+
+  // apply any `formatters` transformations
+  var index = 0;
+  args[0] = args[0].replace(/%([a-zA-Z%])/g, function(match, format) {
+    // if we encounter an escaped % then don&#x27;t increase the array index
+    if (match === &#x27;%%&#x27;) return match;
+    index++;
+    var formatter = exports.formatters[format];
+    if (&#x27;function&#x27; === typeof formatter) {
+      var val = args[index];
+      match = formatter.call(self, val);
+
+      // now we need to remove `args[index]` since it&#x27;s inlined in the `format`
+      args.splice(index, 1);
+      index--;
+    }
+    return match;
+  });
+
+  // apply env-specific formatting (colors, etc.)
+  exports.formatArgs.call(self, args);
+
+  var logFn = debug.log || exports.log || console.log.bind(console);
+  logFn.apply(self, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		requestOptions.url = url;
+
+		if (referer) {
+			requestOptions.headers = requestOptions.headers || {};
+			requestOptions.headers.referer = referer;
+		}
+
+		logger.<span class="apidocCodeKeywordSpan">debug</span>(`[request] sending request for url ${url}, referer ${referer}`);
+
+		return get(requestOptions).then((response) =&#x3e; {
+			logger.debug(`[request] received response for ${response.request.href}, statusCode ${response.statusCode}`);
+			return this.handleResponse(response)
+				.then(transformResult)
+				.then((responseHandlerResult) =&#x3e; {
+					return {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.logger.error" id="apidoc.element.website-scraper.logger.error">
+        function <span class="apidocSignatureSpan">website-scraper.logger.</span>error
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function debug() {
+  // disabled?
+  if (!debug.enabled) return;
+
+  var self = debug;
+
+  // set `diff` timestamp
+  var curr = +new Date();
+  var ms = curr - (prevTime || curr);
+  self.diff = ms;
+  self.prev = prevTime;
+  self.curr = curr;
+  prevTime = curr;
+
+  // turn the `arguments` into a proper Array
+  var args = new Array(arguments.length);
+  for (var i = 0; i &#x3c; args.length; i++) {
+    args[i] = arguments[i];
+  }
+
+  args[0] = exports.coerce(args[0]);
+
+  if (&#x27;string&#x27; !== typeof args[0]) {
+    // anything else let&#x27;s inspect with %O
+    args.unshift(&#x27;%O&#x27;);
+  }
+
+  // apply any `formatters` transformations
+  var index = 0;
+  args[0] = args[0].replace(/%([a-zA-Z%])/g, function(match, format) {
+    // if we encounter an escaped % then don&#x27;t increase the array index
+    if (match === &#x27;%%&#x27;) return match;
+    index++;
+    var formatter = exports.formatters[format];
+    if (&#x27;function&#x27; === typeof formatter) {
+      var val = args[index];
+      match = formatter.call(self, val);
+
+      // now we need to remove `args[index]` since it&#x27;s inlined in the `format`
+      args.splice(index, 1);
+      index--;
+    }
+    return match;
+  });
+
+  // apply env-specific formatting (colors, etc.)
+  exports.formatArgs.call(self, args);
+
+  var logFn = debug.log || exports.log || console.log.bind(console);
+  logFn.apply(self, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		logger.warn(&#x27;ignoring error: &#x27; + err.message);
+		return Promise.resolve(null);
+	}
+	return Promise.reject(err);
+};
+
+Scraper.prototype.errorCleanup = function errorCleanup (error) {
+	logger.<span class="apidocCodeKeywordSpan">error</span>(&#x27;finishing with error: &#x27; + error.message);
+	return this.resourceSaver.errorCleanup(error).then(() =&#x3e; {
+		return Promise.reject(error);
+	});
+};
+
+Scraper.prototype.scrape = function scrape (callback) {
+	return Promise.bind(this)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.logger.info" id="apidoc.element.website-scraper.logger.info">
+        function <span class="apidocSignatureSpan">website-scraper.logger.</span>info
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function debug() {
+  // disabled?
+  if (!debug.enabled) return;
+
+  var self = debug;
+
+  // set `diff` timestamp
+  var curr = +new Date();
+  var ms = curr - (prevTime || curr);
+  self.diff = ms;
+  self.prev = prevTime;
+  self.curr = curr;
+  prevTime = curr;
+
+  // turn the `arguments` into a proper Array
+  var args = new Array(arguments.length);
+  for (var i = 0; i &#x3c; args.length; i++) {
+    args[i] = arguments[i];
+  }
+
+  args[0] = exports.coerce(args[0]);
+
+  if (&#x27;string&#x27; !== typeof args[0]) {
+    // anything else let&#x27;s inspect with %O
+    args.unshift(&#x27;%O&#x27;);
+  }
+
+  // apply any `formatters` transformations
+  var index = 0;
+  args[0] = args[0].replace(/%([a-zA-Z%])/g, function(match, format) {
+    // if we encounter an escaped % then don&#x27;t increase the array index
+    if (match === &#x27;%%&#x27;) return match;
+    index++;
+    var formatter = exports.formatters[format];
+    if (&#x27;function&#x27; === typeof formatter) {
+      var val = args[index];
+      match = formatter.call(self, val);
+
+      // now we need to remove `args[index]` since it&#x27;s inlined in the `format`
+      args.splice(index, 1);
+      index--;
+    }
+    return match;
+  });
+
+  // apply env-specific formatting (colors, etc.)
+  exports.formatArgs.call(self, args);
+
+  var logFn = debug.log || exports.log || console.log.bind(console);
+  logFn.apply(self, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		});
+	}
+
+	if (self.options.recursive) {
+		self.options.sources = _.union(self.options.sources, recursiveSources);
+	}
+
+	logger.<span class="apidocCodeKeywordSpan">info</span>(&#x27;init with options&#x27;, self.options);
+
+	self.request = new Request(self.options);
+	self.resourceHandler = new ResourceHandler(self.options, self);
+	self.filenameGenerator = new FilenameGenerator(self.options);
+	self.resourceSaver = self.options.resourceSaver ? new self.options.resourceSaver(u.clone(self.options)) : new ResourceSaver(self
+.options);
+
+	// Array of Resources for downloading
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.logger.log" id="apidoc.element.website-scraper.logger.log">
+        function <span class="apidocSignatureSpan">website-scraper.logger.</span>log
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function debug() {
+  // disabled?
+  if (!debug.enabled) return;
+
+  var self = debug;
+
+  // set `diff` timestamp
+  var curr = +new Date();
+  var ms = curr - (prevTime || curr);
+  self.diff = ms;
+  self.prev = prevTime;
+  self.curr = curr;
+  prevTime = curr;
+
+  // turn the `arguments` into a proper Array
+  var args = new Array(arguments.length);
+  for (var i = 0; i &#x3c; args.length; i++) {
+    args[i] = arguments[i];
+  }
+
+  args[0] = exports.coerce(args[0]);
+
+  if (&#x27;string&#x27; !== typeof args[0]) {
+    // anything else let&#x27;s inspect with %O
+    args.unshift(&#x27;%O&#x27;);
+  }
+
+  // apply any `formatters` transformations
+  var index = 0;
+  args[0] = args[0].replace(/%([a-zA-Z%])/g, function(match, format) {
+    // if we encounter an escaped % then don&#x27;t increase the array index
+    if (match === &#x27;%%&#x27;) return match;
+    index++;
+    var formatter = exports.formatters[format];
+    if (&#x27;function&#x27; === typeof formatter) {
+      var val = args[index];
+      match = formatter.call(self, val);
+
+      // now we need to remove `args[index]` since it&#x27;s inlined in the `format`
+      args.splice(index, 1);
+      index--;
+    }
+    return match;
+  });
+
+  // apply env-specific formatting (colors, etc.)
+  exports.formatArgs.call(self, args);
+
+  var logFn = debug.log || exports.log || console.log.bind(console);
+  logFn.apply(self, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+#### onResourceSaved
+Function called each time when resource is saved to file system. Callback is called with [Resource](https://github.com/s0ph1e/node
+-website-scraper/blob/master/lib/resource.js) object. Defaults to `null` - no callback will be called.
+```javascript
+scrape({
+  urls: [&#x27;http://example.com/&#x27;],
+  directory: &#x27;/path/to/save&#x27;,
+  onResourceSaved: (resource) =&#x3e; {
+  	console.<span class="apidocCodeKeywordSpan">log</span>(`Resource ${resource} was saved to fs`);
+  }
+})
+```
+
+#### onResourceError
+Function called each time when resource&#x27;s downloading/handling/saving to fs was failed. Callback is called with - [Resource
+](https://github.com/s0ph1e/node-website-scraper/blob/master/lib/resource.js) object and `Error` object. Defaults to `null` - no
+ callback will be called.
+```javascript
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.logger.warn" id="apidoc.element.website-scraper.logger.warn">
+        function <span class="apidocSignatureSpan">website-scraper.logger.</span>warn
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function debug() {
+  // disabled?
+  if (!debug.enabled) return;
+
+  var self = debug;
+
+  // set `diff` timestamp
+  var curr = +new Date();
+  var ms = curr - (prevTime || curr);
+  self.diff = ms;
+  self.prev = prevTime;
+  self.curr = curr;
+  prevTime = curr;
+
+  // turn the `arguments` into a proper Array
+  var args = new Array(arguments.length);
+  for (var i = 0; i &#x3c; args.length; i++) {
+    args[i] = arguments[i];
+  }
+
+  args[0] = exports.coerce(args[0]);
+
+  if (&#x27;string&#x27; !== typeof args[0]) {
+    // anything else let&#x27;s inspect with %O
+    args.unshift(&#x27;%O&#x27;);
+  }
+
+  // apply any `formatters` transformations
+  var index = 0;
+  args[0] = args[0].replace(/%([a-zA-Z%])/g, function(match, format) {
+    // if we encounter an escaped % then don&#x27;t increase the array index
+    if (match === &#x27;%%&#x27;) return match;
+    index++;
+    var formatter = exports.formatters[format];
+    if (&#x27;function&#x27; === typeof formatter) {
+      var val = args[index];
+      match = formatter.call(self, val);
+
+      // now we need to remove `args[index]` since it&#x27;s inlined in the `format`
+      args.splice(index, 1);
+      index--;
+    }
+    return match;
+  });
+
+  // apply env-specific formatting (colors, etc.)
+  exports.formatArgs.call(self, args);
+
+  var logFn = debug.log || exports.log || console.log.bind(console);
+  logFn.apply(self, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			logger.info(&#x27;saving resource &#x27; + resource + &#x27; to fs&#x27;);
+			return self.resourceSaver.saveResource(resource);
+		}).then(function afterResourceSaved () {
+			if (self.options.onResourceSaved) {
+				self.options.onResourceSaved(resource);
+			}
+		}).catch(function handleError (err) {
+			logger.<span class="apidocCodeKeywordSpan">warn</span>(&#x27;failed to save resource &#x27; + resource);
+			return self.handleError(err, resource);
+		});
+};
+
+Scraper.prototype.createNewRequest = function createNewRequest (resource) {
+	const self = this;
+	const url = resource.getUrl();
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.website-scraper.resource" id="apidoc.module.website-scraper.resource">module website-scraper.resource</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.resource.resource" id="apidoc.element.website-scraper.resource.resource">
+        function <span class="apidocSignatureSpan">website-scraper.</span>resource
+        <span class="apidocSignatureSpan">(url, filename)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Resource(url, filename) {
+	this.url = url;
+	this.filename = filename;
+
+	this.type = null;
+	this.depth = 0;
+
+	this.parent = null;
+	this.children = [];
+
+	this.saved = false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.website-scraper.resource.prototype" id="apidoc.module.website-scraper.resource.prototype">module website-scraper.resource.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.resource.prototype.createChild" id="apidoc.element.website-scraper.resource.prototype.createChild">
+        function <span class="apidocSignatureSpan">website-scraper.resource.prototype.</span>createChild
+        <span class="apidocSignatureSpan">(url, filename)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createChild(url, filename) {
+	var child = new Resource(url, filename);
+	var currentDepth = this.getDepth();
+
+	child.parent = this;
+	child.depth = ++currentDepth;
+
+	this.children.push(child);
+
+	return child;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.resource.prototype.getDepth" id="apidoc.element.website-scraper.resource.prototype.getDepth">
+        function <span class="apidocSignatureSpan">website-scraper.resource.prototype.</span>getDepth
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getDepth() {
+	return this.depth;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	this.children = [];
+
+	this.saved = false;
+}
+
+Resource.prototype.createChild = function createChild (url, filename) {
+	var child = new Resource(url, filename);
+	var currentDepth = this.<span class="apidocCodeKeywordSpan">getDepth</span>();
+
+	child.parent = this;
+	child.depth = ++currentDepth;
+
+	this.children.push(child);
+
+	return child;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.resource.prototype.getFilename" id="apidoc.element.website-scraper.resource.prototype.getFilename">
+        function <span class="apidocSignatureSpan">website-scraper.resource.prototype.</span>getFilename
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getFilename() {
+	return this.filename;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+Resource.prototype.isCss = function isCss () {
+	return this.getType() === types.css;
+};
+
+Resource.prototype.toString = function toString () {
+	return &#x27;{ url: &#x22;&#x27; + this.getUrl() + &#x27;&#x22;, filename: &#x22;&#x27; + this.<span class="apidocCodeKeywordSpan
+">getFilename</span>() + &#x27;&#x22;, depth: &#x27; + this.getDepth() + &#x27; }&#x27;;
+};
+
+Resource.prototype.isSaved = function isSaved () {
+	return this.saved;
+};
+
+Resource.prototype.setSaved = function setSaved () {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.resource.prototype.getText" id="apidoc.element.website-scraper.resource.prototype.getText">
+        function <span class="apidocSignatureSpan">website-scraper.resource.prototype.</span>getText
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getText() {
+	return this.text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.resource.prototype.getType" id="apidoc.element.website-scraper.resource.prototype.getType">
+        function <span class="apidocSignatureSpan">website-scraper.resource.prototype.</span>getType
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getType() {
+	return this.type;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+Resource.prototype.getType = function getType () {
+	return this.type;
+};
+
+Resource.prototype.isHtml = function isHtml () {
+	return this.<span class="apidocCodeKeywordSpan">getType</span>() === types.html;
+};
+
+Resource.prototype.isCss = function isCss () {
+	return this.getType() === types.css;
+};
+
+Resource.prototype.toString = function toString () {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.resource.prototype.getUrl" id="apidoc.element.website-scraper.resource.prototype.getUrl">
+        function <span class="apidocSignatureSpan">website-scraper.resource.prototype.</span>getUrl
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getUrl() {
+	return this.url;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+Resource.prototype.isCss = function isCss () {
+	return this.getType() === types.css;
+};
+
+Resource.prototype.toString = function toString () {
+	return &#x27;{ url: &#x22;&#x27; + this.<span class="apidocCodeKeywordSpan">getUrl</span>() + &#x27;&#x22;, filename: &#x22;&#x27
+; + this.getFilename() + &#x27;&#x22;, depth: &#x27; + this.getDepth() + &#x27; }&#x27;;
+};
+
+Resource.prototype.isSaved = function isSaved () {
+	return this.saved;
+};
+
+Resource.prototype.setSaved = function setSaved () {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.resource.prototype.isCss" id="apidoc.element.website-scraper.resource.prototype.isCss">
+        function <span class="apidocSignatureSpan">website-scraper.resource.prototype.</span>isCss
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isCss() {
+	return this.getType() === types.css;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.resource.prototype.isHtml" id="apidoc.element.website-scraper.resource.prototype.isHtml">
+        function <span class="apidocSignatureSpan">website-scraper.resource.prototype.</span>isHtml
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isHtml() {
+	return this.getType() === types.html;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+module.exports = function generateFilename (resource, options) {
+	var resourceUrl = resource.getUrl();
+	var filePath = utils.getFilepathFromUrl(resourceUrl);
+	var extension = utils.getFilenameExtension(filePath);
+
+	// If we have HTML from &#x27;http://example.com/path&#x27; =&#x3e; set &#x27;path/index.html&#x27; as filepath
+	if (resource.<span class="apidocCodeKeywordSpan">isHtml</span>()) {
+		var htmlExtensions = resourceTypeExtensions[resourceTypes.html];
+		var resourceHasHtmlExtension = _.includes(htmlExtensions, extension);
+		// add index.html only if filepath has ext != html &#x27;/path/test.com&#x27; =&#x3e; &#x27;/path/test.com/index.html&#x27;
+		if (!resourceHasHtmlExtension) {
+			filePath = path.join(filePath, options.defaultFilename);
+		}
+	}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.resource.prototype.isSaved" id="apidoc.element.website-scraper.resource.prototype.isSaved">
+        function <span class="apidocSignatureSpan">website-scraper.resource.prototype.</span>isSaved
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isSaved() {
+	return this.saved;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		.then(this.waitForLoad.bind(this));
+};
+
+// Returns a promise which gets resolved when all resources are loaded.
+// 1. Get all not saved resources and save them
+// 2. Recursion if any new not saved resource were added during this time. If not, loading is done.
+Scraper.prototype.waitForLoad = function waitForLoad () {
+	const resourcesToSave = Array.from(this.loadedResources.values()).filter((r) =&#x3e; !r.<span class="apidocCodeKeywordSpan">isSaved
+</span>());
+	const loadingIsFinished = _.isEmpty(resourcesToSave);
+
+	if (!loadingIsFinished) {
+		return Promise
+			.mapSeries(resourcesToSave, this.saveResource.bind(this))
+			.then(this.waitForLoad.bind(this));
+	}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.resource.prototype.setFilename" id="apidoc.element.website-scraper.resource.prototype.setFilename">
+        function <span class="apidocSignatureSpan">website-scraper.resource.prototype.</span>setFilename
+        <span class="apidocSignatureSpan">(filename)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setFilename(filename) {
+	this.filename = filename;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+				resource.setUrl(responseData.url);
+				self.requestedResourcePromises.set(responseData.url, requestPromise);
+			}
+
+			resource.setType(u.getTypeByMime(responseData.mimeType));
+
+			const filename = self.filenameGenerator.generateFilename(resource);
+			resource.<span class="apidocCodeKeywordSpan">setFilename</span>(filename);
+
+			// if type was not determined by mime we can try to get it from filename after it was generated
+			if (!resource.getType()) {
+				resource.setType(u.getTypeByFilename(filename));
+			}
+
+			if (responseData.metadata) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.resource.prototype.setMetadata" id="apidoc.element.website-scraper.resource.prototype.setMetadata">
+        function <span class="apidocSignatureSpan">website-scraper.resource.prototype.</span>setMetadata
+        <span class="apidocSignatureSpan">(metadata)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setMetadata(metadata) {
+	this.metadata = metadata;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+			// if type was not determined by mime we can try to get it from filename after it was generated
+			if (!resource.getType()) {
+				resource.setType(u.getTypeByFilename(filename));
+			}
+
+			if (responseData.metadata) {
+				resource.<span class="apidocCodeKeywordSpan">setMetadata</span>(responseData.metadata);
+			}
+
+			resource.setText(responseData.body);
+			self.loadResource(resource); // Add resource to list for future downloading, see Scraper.waitForLoad
+			return resource;
+		}).catch(function handleError (err) {
+			logger.warn(&#x27;failed to request resource &#x27; + resource);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.resource.prototype.setSaved" id="apidoc.element.website-scraper.resource.prototype.setSaved">
+        function <span class="apidocSignatureSpan">website-scraper.resource.prototype.</span>setSaved
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setSaved() {
+	this.saved = true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		logger.debug(&#x27;add loaded resource &#x27; + resource);
+		this.loadedResources.set(url, resource);
+	}
+};
+
+Scraper.prototype.saveResource = function saveResource (resource) {
+	const self = this;
+	resource.<span class="apidocCodeKeywordSpan">setSaved</span>();
+
+	return Promise.resolve()
+		.then(function handleResource () {
+			return self.resourceHandler.handleResource(resource);
+		}).then(function fileHandled () {
+			logger.info(&#x27;saving resource &#x27; + resource + &#x27; to fs&#x27;);
+			return self.resourceSaver.saveResource(resource);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.resource.prototype.setText" id="apidoc.element.website-scraper.resource.prototype.setText">
+        function <span class="apidocSignatureSpan">website-scraper.resource.prototype.</span>setText
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setText(text) {
+	this.text = text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+				resource.setType(u.getTypeByFilename(filename));
+			}
+
+			if (responseData.metadata) {
+				resource.setMetadata(responseData.metadata);
+			}
+
+			resource.<span class="apidocCodeKeywordSpan">setText</span>(responseData.body);
+			self.loadResource(resource); // Add resource to list for future downloading, see Scraper.waitForLoad
+			return resource;
+		}).catch(function handleError (err) {
+			logger.warn(&#x27;failed to request resource &#x27; + resource);
+			return self.handleError(err, resource);
+		});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.resource.prototype.setType" id="apidoc.element.website-scraper.resource.prototype.setType">
+        function <span class="apidocSignatureSpan">website-scraper.resource.prototype.</span>setType
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setType(type) {
+	this.type = type;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+					return self.requestedResourcePromises.get(responseData.url);
+				}
+
+				resource.setUrl(responseData.url);
+				self.requestedResourcePromises.set(responseData.url, requestPromise);
+			}
+
+			resource.<span class="apidocCodeKeywordSpan">setType</span>(u.getTypeByMime(responseData.mimeType));
+
+			const filename = self.filenameGenerator.generateFilename(resource);
+			resource.setFilename(filename);
+
+			// if type was not determined by mime we can try to get it from filename after it was generated
+			if (!resource.getType()) {
+				resource.setType(u.getTypeByFilename(filename));
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.resource.prototype.setUrl" id="apidoc.element.website-scraper.resource.prototype.setUrl">
+        function <span class="apidocSignatureSpan">website-scraper.resource.prototype.</span>setUrl
+        <span class="apidocSignatureSpan">(url)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setUrl(url) {
+	this.url = url;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			if (!u.urlsEqual(responseData.url, url)) { // Url may be changed in redirects
+				logger.debug(&#x27;url changed. old url = &#x27; + url + &#x27;, new url = &#x27; + responseData.url);
+
+				if (self.requestedResourcePromises.has(responseData.url)) {
+					return self.requestedResourcePromises.get(responseData.url);
+				}
+
+				resource.<span class="apidocCodeKeywordSpan">setUrl</span>(responseData.url);
+				self.requestedResourcePromises.set(responseData.url, requestPromise);
+			}
+
+			resource.setType(u.getTypeByMime(responseData.mimeType));
+
+			const filename = self.filenameGenerator.generateFilename(resource);
+			resource.setFilename(filename);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.resource.prototype.toString" id="apidoc.element.website-scraper.resource.prototype.toString">
+        function <span class="apidocSignatureSpan">website-scraper.resource.prototype.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() {
+	return &#x27;{ url: &#x22;&#x27; + this.getUrl() + &#x27;&#x22;, filename: &#x22;&#x27; + this.getFilename() + &#x27;&#x22;, depth: &#x27; + this.getDepth() + &#x27; }&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.resource.prototype.updateChild" id="apidoc.element.website-scraper.resource.prototype.updateChild">
+        function <span class="apidocSignatureSpan">website-scraper.resource.prototype.</span>updateChild
+        <span class="apidocSignatureSpan">(oldChild, newChild)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function updateChild(oldChild, newChild) {
+	var index = this.children.indexOf(oldChild);
+	if (index &#x3e;= 0) {
+		this.children[index] = newChild;
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.website-scraper.scraper" id="apidoc.module.website-scraper.scraper">module website-scraper.scraper</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.scraper.scraper" id="apidoc.element.website-scraper.scraper.scraper">
+        function <span class="apidocSignatureSpan">website-scraper.</span>scraper
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Scraper(options) {
+	const self = this;
+
+	self.options = u.extend(defaults, options);
+	self.options.request = u.extend(defaults.request, options.request);
+	self.options.urls = Array.isArray(self.options.urls) ? self.options.urls : [self.options.urls];
+
+	if (self.options.subdirectories) {
+		self.options.subdirectories.forEach((element) =&#x3e; {
+			element.extensions = element.extensions.map((ext) =&#x3e; ext.toLowerCase());
+		});
+	}
+
+	if (self.options.recursive) {
+		self.options.sources = _.union(self.options.sources, recursiveSources);
+	}
+
+	logger.info(&#x27;init with options&#x27;, self.options);
+
+	self.request = new Request(self.options);
+	self.resourceHandler = new ResourceHandler(self.options, self);
+	self.filenameGenerator = new FilenameGenerator(self.options);
+	self.resourceSaver = self.options.resourceSaver ? new self.options.resourceSaver(u.clone(self.options)) : new ResourceSaver(self
+.options);
+
+	// Array of Resources for downloading
+	self.resources = self.options.urls.map((obj) =&#x3e; {
+		const url = (obj &#x26;&#x26; obj.url) ? obj.url : obj;
+		const filename = (obj &#x26;&#x26; obj.filename) ? obj.filename : self.options.defaultFilename;
+		return new Resource(url, filename);
+	});
+
+	self.requestedResourcePromises = new NormalizedUrlMap(); // Map url -&#x3e; request promise
+	self.loadedResources = new NormalizedUrlMap(); // Map url -&#x3e; resource
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.website-scraper.scraper.prototype" id="apidoc.module.website-scraper.scraper.prototype">module website-scraper.scraper.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.scraper.prototype.createNewRequest" id="apidoc.element.website-scraper.scraper.prototype.createNewRequest">
+        function <span class="apidocSignatureSpan">website-scraper.scraper.prototype.</span>createNewRequest
+        <span class="apidocSignatureSpan">(resource)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createNewRequest(resource) {
+	const self = this;
+	const url = resource.getUrl();
+
+	const requestPromise = Promise.resolve()
+		.then(function makeRequest () {
+			const referer = resource.parent ? resource.parent.getUrl() : null;
+			return self.request.get(url, referer);
+		}).then(function requestCompleted (responseData) {
+
+			if (!u.urlsEqual(responseData.url, url)) { // Url may be changed in redirects
+				logger.debug(&#x27;url changed. old url = &#x27; + url + &#x27;, new url = &#x27; + responseData.url);
+
+				if (self.requestedResourcePromises.has(responseData.url)) {
+					return self.requestedResourcePromises.get(responseData.url);
+				}
+
+				resource.setUrl(responseData.url);
+				self.requestedResourcePromises.set(responseData.url, requestPromise);
+			}
+
+			resource.setType(u.getTypeByMime(responseData.mimeType));
+
+			const filename = self.filenameGenerator.generateFilename(resource);
+			resource.setFilename(filename);
+
+			// if type was not determined by mime we can try to get it from filename after it was generated
+			if (!resource.getType()) {
+				resource.setType(u.getTypeByFilename(filename));
+			}
+
+			if (responseData.metadata) {
+				resource.setMetadata(responseData.metadata);
+			}
+
+			resource.setText(responseData.body);
+			self.loadResource(resource); // Add resource to list for future downloading, see Scraper.waitForLoad
+			return resource;
+		}).catch(function handleError (err) {
+			logger.warn(&#x27;failed to request resource &#x27; + resource);
+			return self.handleError(err, resource);
+		});
+
+	self.requestedResourcePromises.set(url, requestPromise);
+	return requestPromise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	}
+
+	if (this.requestedResourcePromises.has(url)) {
+		logger.debug(&#x27;found requested resource for &#x27; + resource);
+		return this.requestedResourcePromises.get(url);
+	}
+
+	return this.<span class="apidocCodeKeywordSpan">createNewRequest</span>(resource);
+};
+
+Scraper.prototype.load = function load () {
+	return Promise
+		.map(this.resources, this.requestResource.bind(this))
+		.then(this.waitForLoad.bind(this));
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.scraper.prototype.errorCleanup" id="apidoc.element.website-scraper.scraper.prototype.errorCleanup">
+        function <span class="apidocSignatureSpan">website-scraper.scraper.prototype.</span>errorCleanup
+        <span class="apidocSignatureSpan">(error)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function errorCleanup(error) {
+	logger.error(&#x27;finishing with error: &#x27; + error.message);
+	return this.resourceSaver.errorCleanup(error).then(() =&#x3e; {
+		return Promise.reject(error);
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		return Promise.resolve(null);
+	}
+	return Promise.reject(err);
+};
+
+Scraper.prototype.errorCleanup = function errorCleanup (error) {
+	logger.error(&#x27;finishing with error: &#x27; + error.message);
+	return this.resourceSaver.<span class="apidocCodeKeywordSpan">errorCleanup</span>(error).then(() =&#x3e; {
+		return Promise.reject(error);
+	});
+};
+
+Scraper.prototype.scrape = function scrape (callback) {
+	return Promise.bind(this)
+		.then(this.load)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.scraper.prototype.handleError" id="apidoc.element.website-scraper.scraper.prototype.handleError">
+        function <span class="apidocSignatureSpan">website-scraper.scraper.prototype.</span>handleError
+        <span class="apidocSignatureSpan">(err, resource)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function handleError(err, resource) {
+	if (resource &#x26;&#x26; this.options.onResourceError) {
+		this.options.onResourceError(resource, err);
+	}
+	if (this.options.ignoreErrors) {
+		logger.warn(&#x27;ignoring error: &#x27; + err.message);
+		return Promise.resolve(null);
+	}
+	return Promise.reject(err);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			return self.resourceSaver.saveResource(resource);
+		}).then(function afterResourceSaved () {
+			if (self.options.onResourceSaved) {
+				self.options.onResourceSaved(resource);
+			}
+		}).catch(function handleError (err) {
+			logger.warn(&#x27;failed to save resource &#x27; + resource);
+			return self.<span class="apidocCodeKeywordSpan">handleError</span>(err, resource);
+		});
+};
+
+Scraper.prototype.createNewRequest = function createNewRequest (resource) {
+	const self = this;
+	const url = resource.getUrl();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.scraper.prototype.load" id="apidoc.element.website-scraper.scraper.prototype.load">
+        function <span class="apidocSignatureSpan">website-scraper.scraper.prototype.</span>load
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function load() {
+	return Promise
+		.map(this.resources, this.requestResource.bind(this))
+		.then(this.waitForLoad.bind(this));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.scraper.prototype.loadResource" id="apidoc.element.website-scraper.scraper.prototype.loadResource">
+        function <span class="apidocSignatureSpan">website-scraper.scraper.prototype.</span>loadResource
+        <span class="apidocSignatureSpan">(resource)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function loadResource(resource) {
+	const url = resource.getUrl();
+
+	if (this.loadedResources.has(url)) {
+		logger.debug(&#x27;found loaded resource for &#x27; + resource);
+	} else {
+		logger.debug(&#x27;add loaded resource &#x27; + resource);
+		this.loadedResources.set(url, resource);
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			}
+
+			if (responseData.metadata) {
+				resource.setMetadata(responseData.metadata);
+			}
+
+			resource.setText(responseData.body);
+			self.<span class="apidocCodeKeywordSpan">loadResource</span>(resource); // Add resource to list for future downloading, see Scraper
+.waitForLoad
+			return resource;
+		}).catch(function handleError (err) {
+			logger.warn(&#x27;failed to request resource &#x27; + resource);
+			return self.handleError(err, resource);
+		});
+
+	self.requestedResourcePromises.set(url, requestPromise);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.scraper.prototype.requestResource" id="apidoc.element.website-scraper.scraper.prototype.requestResource">
+        function <span class="apidocSignatureSpan">website-scraper.scraper.prototype.</span>requestResource
+        <span class="apidocSignatureSpan">(resource)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function requestResource(resource) {
+	const url = resource.getUrl();
+
+	if (this.options.urlFilter &#x26;&#x26; !this.options.urlFilter(url)) {
+		logger.debug(&#x27;filtering out &#x27; + resource + &#x27; by url filter&#x27;);
+		return Promise.resolve(null);
+	}
+
+	if (this.options.maxDepth &#x26;&#x26; resource.getDepth() &#x3e; this.options.maxDepth) {
+		logger.debug(&#x27;filtering out &#x27; + resource + &#x27; by depth&#x27;);
+		return Promise.resolve(null);
+	}
+
+	if (this.requestedResourcePromises.has(url)) {
+		logger.debug(&#x27;found requested resource for &#x27; + resource);
+		return this.requestedResourcePromises.get(url);
+	}
+
+	return this.createNewRequest(resource);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.scraper.prototype.saveResource" id="apidoc.element.website-scraper.scraper.prototype.saveResource">
+        function <span class="apidocSignatureSpan">website-scraper.scraper.prototype.</span>saveResource
+        <span class="apidocSignatureSpan">(resource)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function saveResource(resource) {
+	const self = this;
+	resource.setSaved();
+
+	return Promise.resolve()
+		.then(function handleResource () {
+			return self.resourceHandler.handleResource(resource);
+		}).then(function fileHandled () {
+			logger.info(&#x27;saving resource &#x27; + resource + &#x27; to fs&#x27;);
+			return self.resourceSaver.saveResource(resource);
+		}).then(function afterResourceSaved () {
+			if (self.options.onResourceSaved) {
+				self.options.onResourceSaved(resource);
+			}
+		}).catch(function handleError (err) {
+			logger.warn(&#x27;failed to save resource &#x27; + resource);
+			return self.handleError(err, resource);
+		});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	resource.setSaved();
+
+	return Promise.resolve()
+		.then(function handleResource () {
+			return self.resourceHandler.handleResource(resource);
+		}).then(function fileHandled () {
+			logger.info(&#x27;saving resource &#x27; + resource + &#x27; to fs&#x27;);
+			return self.resourceSaver.<span class="apidocCodeKeywordSpan">saveResource</span>(resource);
+		}).then(function afterResourceSaved () {
+			if (self.options.onResourceSaved) {
+				self.options.onResourceSaved(resource);
+			}
+		}).catch(function handleError (err) {
+			logger.warn(&#x27;failed to save resource &#x27; + resource);
+			return self.handleError(err, resource);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.scraper.prototype.scrape" id="apidoc.element.website-scraper.scraper.prototype.scrape">
+        function <span class="apidocSignatureSpan">website-scraper.scraper.prototype.</span>scrape
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function scrape(callback) {
+	return Promise.bind(this)
+		.then(this.load)
+		.catch(this.errorCleanup)
+		.asCallback(callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+&#x27;use strict&#x27;;
+
+const Promise = require(&#x27;bluebird&#x27;);
+const Scraper = require(&#x27;./lib/scraper.js&#x27;);
+
+module.exports = (options, callback) =&#x3e; {
+	return Promise.try(() =&#x3e; {
+		return new Scraper(options).<span class="apidocCodeKeywordSpan">scrape</span>(callback);
+	});
+};
+
+module.exports.defaults = Scraper.defaults;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.website-scraper.scraper.prototype.waitForLoad" id="apidoc.element.website-scraper.scraper.prototype.waitForLoad">
+        function <span class="apidocSignatureSpan">website-scraper.scraper.prototype.</span>waitForLoad
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function waitForLoad() {
+	const resourcesToSave = Array.from(this.loadedResources.values()).filter((r) =&#x3e; !r.isSaved());
+	const loadingIsFinished = _.isEmpty(resourcesToSave);
+
+	if (!loadingIsFinished) {
+		return Promise
+			.mapSeries(resourcesToSave, this.saveResource.bind(this))
+			.then(this.waitForLoad.bind(this));
+	}
+	logger.info(&#x27;downloading is finished successfully&#x27;);
+	return Promise.resolve(this.resources);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
